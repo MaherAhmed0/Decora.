@@ -23,7 +23,7 @@ ul {
 }
 
 .container {
-    width: 80%;
+    width: 1270px;
     margin: 0 auto;
     padding: 0px 0.5rem;
 }
@@ -269,4 +269,119 @@ nav .links-list li .main-links:focus {
 
 .img-content img {
     transform: translate(70px, 58px);
+}
+
+/* ----------------------------------------------------------------------------------- */
+/* Best Sellers */
+
+.best-sellers {
+    padding: 96px 0px;
+}
+
+.best-sellers-content {
+    display: flex;
+}
+
+.best-sellers-content .item {
+    width: 25%;
+    padding: 0 12px;
+}
+
+.item h2 {
+    font-size: 32px;
+    font-weight: 600;
+    color: #2f2f2f;
+    margin-bottom: 24px;
+}
+
+.item p {
+    font-size: 16px;
+    color: #6a6a6a;
+    margin-bottom: 24px;
+}
+
+.item button {
+    font-size: 16px;
+    font-weight: 600;
+    padding: 15px 36px;
+    border-radius: 30px;
+    color: white;
+    background-color: #2f2f2f;
+    border: 0;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.item button:hover {
+    background-color: #222222;
+}
+
+.product-item {
+    text-align: center;
+    padding-bottom: 50px;
+    position: relative;
+    cursor: pointer;
+}
+
+.item .product-item img {
+    width: 100%;
+    margin-bottom: 30px;
+    transition: 0.5s;
+}
+
+.item .product-item h3 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #2f2f2f;
+    margin-bottom: 8px;
+}
+
+.item .product-item strong {
+    font-size: 20px;
+    color: #2f2f2f;
+    display: block;
+}
+
+.product-item::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #dce5e4;
+    height: 0%;
+    z-index: -1;
+    border-radius: 10px;
+    transition: 0.5s;
+}
+
+.item .product-item i {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 35px;
+    height: 35px;
+    background-color: #2f2f2f;
+    color: white;
+    font-size: 18px;
+    margin-bottom: -17px;
+    border-radius: 50%;
+    opacity: 0;
+    transition: all 0.5s;
+}
+
+.product-item:hover::before {
+    height: 60%;
+}
+
+.product-item:hover i {
+    opacity: 1;
+}
+
+.product-item:hover img {
+    transform: translateY(-20px);
 }
