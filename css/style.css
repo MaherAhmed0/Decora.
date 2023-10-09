@@ -25,7 +25,7 @@ ul {
 .container {
     width: 80%;
     margin: 0 auto;
-    padding: 0.5rem;
+    padding: 0px 0.5rem;
 }
 
 /* ----------------------------------------------------------------------------------- */
@@ -66,6 +66,15 @@ nav .links-list li .main-links {
     font-size: 15px;
     font-weight: 600;
     position: relative;
+    transition: 0.3s;
+}
+
+nav .links-list li .main-links:hover {
+    color: rgb(255, 255, 255);
+}
+
+nav .links-list li .main-links:focus {
+    color: rgb(255, 255, 255);
 }
 
 .main-links::before {
@@ -140,15 +149,17 @@ nav .links-list li .main-links {
     position: absolute;
     display: flex;
     justify-content: space-between;
+    background-color: #3b5d50;
     width: 390px;
     padding: 1rem;
     margin: 20px 0 0 20px;
-    border: 1px solid #f9bf29;
+    border: 1px solid #f9be29c2;
     border-radius: 4px;
+    z-index: 9;
     transform: scale(0);
     opacity: 0;
     visibility: hidden;
-    transition: all 0.5s;
+    transition: all 0.4s;
 }
 
 .drop:hover .menu {
@@ -158,7 +169,7 @@ nav .links-list li .main-links {
 }
 
 .menu-column a {
-    color: rgba(255, 255, 255, 0.5);
+    color: rgba(255, 255, 255);
     font-size: 14px;
     font-weight: 600;
 }
@@ -168,7 +179,7 @@ nav .links-list li .main-links {
 }
 
 .menu-column .category-name {
-    border-bottom: 3px dotted #f9bf29;
+    border-bottom: 2px dotted #f9be29c2;
     font-size: 15px;
 }
 
@@ -184,4 +195,78 @@ nav .links-list li .main-links {
     background-color: #f9bf29;
     border-radius: 50%;
     padding: 0px 6px;
+}
+
+/* ----------------------------------------------------------------------------------- */
+/* Landing */
+
+.landing {
+    background-color: #3b5d50;
+    position: relative;
+}
+
+.landing .container {
+    display: flex;
+    align-items: center;
+}
+
+.landing .text-content h2 {
+    font-size: 50px;
+    color: white;
+    font-weight: 600;
+    margin-bottom: 30px;
+    line-height: 1.2;
+}
+
+.landing .text-content p {
+    color: #EFF2F1;
+    font-size: 16px;
+    margin-bottom: 24px;
+}
+
+.text-content .btn-1 {
+    color: #2f2f2f;
+    background: #f9bf29;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 14px 30px;
+    margin-right: 8px;
+    border: 0;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.text-content .btn-1:hover {
+    background-color: #F8B810;
+}
+
+.text-content .btn-2 {
+    color: #EFF2F1;
+    background: #3b5d50;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 14px 30px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 30px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.text-content .btn-2:hover {
+    border-color: white;
+}
+
+.img-content::before {
+    content: "";
+    position: absolute;
+    top: 90px;
+    right: 90px;
+    background-image: url(../images/dots-light.svg);
+    width: 255px;
+    height: 217px;
+}
+
+.img-content img {
+    transform: translate(70px, 58px);
 }
