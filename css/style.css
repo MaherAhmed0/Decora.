@@ -1,0 +1,187 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Bellota Text', cursive;
+    font-family: 'Inter', sans-serif;
+    font-family: 'Lato', sans-serif;
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Saira', sans-serif;
+    background-color: #EFF2F1;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 0.5rem;
+}
+
+/* ----------------------------------------------------------------------------------- */
+/* Components */
+
+/* ----------------------------------------------------------------------------------- */
+/* Header */
+
+header {
+    background-color: #3b5d50;
+    padding: 11px 0;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .company-name {
+    color: white;
+    font-weight: 600;
+}
+
+.company-name span {
+    opacity: 0.4;
+    border-radius: 50%;
+}
+
+nav .links-list {
+    display: flex;
+}
+
+nav .links-list li .main-links {
+    padding: 10px 12px;
+    margin: 0 16px;
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 15px;
+    font-weight: 600;
+    position: relative;
+}
+
+.main-links::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0px;
+    height: 2px;
+    background-color: #f9bf29;
+    transition: 0.3s;
+}
+
+.main-links::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 0px;
+    height: 2px;
+    background-color: #f9bf29;
+    transition: 0.3s;
+}
+
+.main-links span::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 2px;
+    height: 0px;
+    background-color: #f9bf29;
+    transition: 0.3s;
+}
+
+.main-links span::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 2px;
+    height: 0px;
+    background-color: #f9bf29;
+    transition: 0.3s;
+}
+
+.main-links:hover::before,
+.main-links:hover::after {
+    width: 100%;
+}
+
+.main-links:hover span::before,
+.main-links:hover span::after {
+    height: 100%;
+}
+
+.main-links:focus:before,
+.main-links:focus:after {
+    width: 100%;
+}
+
+.main-links:focus span::before,
+.main-links:focus span::after {
+    height: 100%;
+}
+
+.drop {
+    position: relative;
+}
+
+.menu {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    width: 390px;
+    padding: 1rem;
+    margin: 20px 0 0 20px;
+    border: 1px solid #f9bf29;
+    border-radius: 4px;
+    transform: scale(0);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.5s;
+}
+
+.drop:hover .menu {
+    visibility: visible;
+    opacity: 1;
+    transform: scale(1);
+}
+
+.menu-column a {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.menu-column .first {
+    margin-bottom: 8px;
+}
+
+.menu-column .category-name {
+    border-bottom: 3px dotted #f9bf29;
+    font-size: 15px;
+}
+
+.header-icons a {
+    color: white;
+    font-size: 22px;
+    padding: 0px 8px;
+}
+
+.header-icons a sub {
+    font-size: 12px;
+    font-weight: 800;
+    background-color: #f9bf29;
+    border-radius: 50%;
+    padding: 0px 6px;
+}
