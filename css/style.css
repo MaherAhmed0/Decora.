@@ -186,7 +186,7 @@ nav .links-list li .main-links:focus {
 .header-icons a {
     color: white;
     font-size: 22px;
-    padding: 0px 8px;
+    padding: 0px 12px;
 }
 
 .header-icons a sub {
@@ -384,4 +384,98 @@ nav .links-list li .main-links:focus {
 
 .product-item:hover img {
     transform: translateY(-20px);
+}
+
+/* ----------------------------------------------------------------------------------- */
+/* Services */
+
+.services {
+    padding: 96px 0px;
+}
+
+.services .container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.services-text {
+    width: 50%;
+    padding: 0 12px;
+}
+
+.services-text .heading {
+    font-size: 32px;
+    font-weight: 500;
+    color: #2f2f2f;
+    margin-bottom: 8px;
+}
+
+.services-text .text {
+    font-size: 16px;
+    color: #6a6a6a;
+    margin-bottom: 24px;
+}
+
+.sevices-items {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.service {
+    width: 50%;
+    margin-bottom: 30px;
+    padding: 0 12px;
+}
+
+.service i {
+    font-size: 30px;
+    color: #2f2f2f;
+    margin-bottom: 16px;
+    position: relative;
+}
+
+.service span {
+    position: absolute;
+    bottom: -8px;
+    right: -14px;
+    width: 30px;
+    height: 30px;
+    background: rgba(59, 93, 80, 0.2);
+    border-radius: 50%;
+}
+
+.service h3 {
+    font-size: 18px;
+    font-weight: 500;
+    color: #2f2f2f;
+    margin-bottom: 8px;
+}
+
+.service p {
+    font-size: 14px;
+    color: #6a6a6a;
+    margin-bottom: 16px;
+}
+
+.services-img {
+    width: 40%;
+}
+
+.services-img figure {
+    position: relative;
+}
+
+.services-img figure::before {
+    content: "";
+    position: absolute;
+    width: 255px;
+    height: 217px;
+    background-image: url(../images/dots-yellow.svg);
+    transform: translate(-40%, -40%);
+    z-index: -1;
+}
+
+.services-img img {
+    width: 100%;
+    border-radius: 20px;
 }
